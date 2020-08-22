@@ -9,6 +9,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IonicStorageModule } from '@ionic/storage';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+
 
 // Mis importaciones
 import { HttpClientModule } from '@angular/common/http'; // Para poder usar http. Los módulos se agregan en los imports
@@ -25,10 +27,11 @@ import { HttpClientModule } from '@angular/common/http'; // Para poder usar http
     HttpClientModule,
     IonicStorageModule.forRoot()
   ],
-  providers: [
+  providers: [ // Los servicios se proveen aquí. Son los plugins
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    Geolocation
   ],
   bootstrap: [AppComponent]
 })
