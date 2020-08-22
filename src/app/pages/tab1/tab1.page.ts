@@ -17,6 +17,12 @@ export class Tab1Page implements OnInit {
 
   ngOnInit() {
     this.siguientes();
+
+    // Suscribirse al evento que se lanza cada vez que el usuario crea un nuevo post
+    this.postsService.nuevoPost
+      .subscribe(post => {
+        this.posts.unshift(post);
+      });
   }
 
   recargar(event) {

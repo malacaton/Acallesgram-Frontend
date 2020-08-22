@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { PostsComponent } from './posts/posts.component';
 import { PostComponent } from './post/post.component';
+import { AvatarSelectorComponent } from './avatar-selector/avatar-selector.component';
 import { IonicModule } from '@ionic/angular';
 import { PipesModule } from '../pipes/pipes.module';
 
@@ -11,7 +12,8 @@ import { PipesModule } from '../pipes/pipes.module';
   ],
   declarations: [
     PostComponent,
-    PostsComponent
+    PostsComponent,
+    AvatarSelectorComponent
   ],
   imports: [
     IonicModule, // Porque vamos a utiliar componentes de Ionic en los componentes de esta carpeta
@@ -19,7 +21,8 @@ import { PipesModule } from '../pipes/pipes.module';
     PipesModule
   ],
   exports: [
-    PostsComponent
+    PostsComponent,
+    AvatarSelectorComponent
   ],
 })
 
