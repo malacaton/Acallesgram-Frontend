@@ -6,6 +6,7 @@ import { PostComponent } from './post/post.component';
 import { AvatarSelectorComponent } from './avatar-selector/avatar-selector.component';
 import { IonicModule } from '@ionic/angular';
 import { PipesModule } from '../pipes/pipes.module';
+import { MapaComponent } from './mapa/mapa.component';
 
 @NgModule({
   entryComponents: [
@@ -13,7 +14,8 @@ import { PipesModule } from '../pipes/pipes.module';
   declarations: [
     PostComponent,
     PostsComponent,
-    AvatarSelectorComponent
+    AvatarSelectorComponent,
+    MapaComponent
   ],
   imports: [
     IonicModule, // Porque vamos a utiliar componentes de Ionic en los componentes de esta carpeta

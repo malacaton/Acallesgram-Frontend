@@ -39,16 +39,28 @@
   </ion-list>
 
   <ion-row>
-    <ion-col size="6">
+    <ion-col size="4">
       <ion-button expand="full"
-                  shape="round">
+                  shape="round"
+                  (click)="camara()">
         <ion-icon slot="start" name="camera"></ion-icon>
         Cámara
       </ion-button>
     </ion-col>
-    <ion-col size="6">
+
+    <ion-col size="4">
       <ion-button expand="full"
-                  shape="round">
+                  shape="round"
+                  (click)="camaraB64()">
+        <ion-icon slot="start" name="camera"></ion-icon>
+        CámaraB64
+      </ion-button>
+    </ion-col>
+
+    <ion-col size="4">
+      <ion-button expand="full"
+                  shape="round"
+                  (click)="libreria()">
         <ion-icon slot="start" name="images"></ion-icon>
         Galería
       </ion-button>
@@ -58,7 +70,7 @@
   <ion-row>
     <ion-col size="3" *ngFor="let image of tempImages">
       <ion-card>
-        <img src="">
+        <img [src]="image | imageSanitizer">
       </ion-card>
     </ion-col>
   </ion-row>
